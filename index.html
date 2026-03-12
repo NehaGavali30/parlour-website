@@ -2,9 +2,12 @@
 <html>
 
 <head>
-google269b62570d6fa387.html
 
 <title>Saundaryaprabha Beauty Parlour</title>
+
+<meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur provides hair spa, keratin, smoothening, haircut, facial, laser treatment and bridal makeup services.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur provides hair spa, keratin, smoothening, haircut, facial, laser treatment and bridal makeup services.">
 
@@ -21,14 +24,13 @@ background:#f5f0ff;
 
 header{
 background:linear-gradient(135deg,#c8a2ff,#a678ff);
-padding:90px 20px;
+padding:60px 20px;
 color:white;
 }
 
 header h1{
-font-size:48px;
+font-size:40px;
 margin:0;
-letter-spacing:2px;
 }
 
 /* BUTTON */
@@ -36,12 +38,12 @@ letter-spacing:2px;
 .main-btn{
 background:#7a4cff;
 color:white;
-padding:15px 45px;
-font-size:20px;
+padding:15px 40px;
+font-size:18px;
 border:none;
 border-radius:30px;
 cursor:pointer;
-margin-top:30px;
+margin-top:25px;
 transition:0.3s;
 }
 
@@ -53,18 +55,17 @@ background:#5f34e0;
 /* SECTION */
 
 .section{
-padding:50px 20px;
-animation:fadeIn 0.8s ease;
+padding:40px 15px;
 }
 
 /* CATEGORY CARDS */
 
 .card{
 background:white;
-padding:25px;
-margin:20px;
-display:inline-block;
-width:220px;
+padding:20px;
+margin:15px auto;
+width:90%;
+max-width:220px;
 border-radius:15px;
 box-shadow:0 6px 20px rgba(0,0,0,0.15);
 cursor:pointer;
@@ -73,7 +74,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 background:#efe7ff;
 }
 
@@ -81,8 +82,8 @@ background:#efe7ff;
 
 .service{
 background:white;
-padding:12px 18px;
-margin:10px;
+padding:10px 15px;
+margin:8px;
 display:inline-block;
 border-radius:8px;
 box-shadow:0 3px 10px rgba(0,0,0,0.2);
@@ -99,13 +100,16 @@ transform:scale(1.05);
 
 .gallery{
 margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .gallery img{
-width:260px;
-height:195px;
-object-fit:cover;
-margin:12px;
+width:100%;
+max-width:260px;
+height:auto;
+margin:10px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.25);
 transition:transform 0.4s;
@@ -114,7 +118,7 @@ transition:transform 0.4s;
 /* HOVER ZOOM */
 
 .gallery img:hover{
-transform:scale(1.15);
+transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -122,15 +126,23 @@ transform:scale(1.15);
 footer{
 background:#c8a2ff;
 color:white;
-padding:30px;
-margin-top:50px;
+padding:25px;
+margin-top:40px;
 }
 
-/* SMOOTH ANIMATION */
+/* MOBILE */
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+@media(max-width:600px){
+
+header h1{
+font-size:30px;
+}
+
+.main-btn{
+font-size:16px;
+padding:12px 30px;
+}
+
 }
 
 </style>
@@ -148,8 +160,6 @@ to{opacity:1; transform:translateY(0);}
 
 </header>
 
-<!-- MAIN MENU -->
-
 <div id="menu" class="section" style="display:none;">
 
 <div class="card" onclick="showHair()">Hair</div>
@@ -157,8 +167,6 @@ to{opacity:1; transform:translateY(0);}
 <div class="card" onclick="showMakeup()">Makeup</div>
 
 </div>
-
-<!-- HAIR -->
 
 <div id="hair" class="section" style="display:none;">
 
@@ -171,8 +179,6 @@ to{opacity:1; transform:translateY(0);}
 
 </div>
 
-<!-- SKIN -->
-
 <div id="skin" class="section" style="display:none;">
 
 <h2>Skin Services</h2>
@@ -183,8 +189,6 @@ to{opacity:1; transform:translateY(0);}
 
 </div>
 
-<!-- MAKEUP -->
-
 <div id="makeup" class="section" style="display:none;">
 
 <h2>Makeup Services</h2>
@@ -194,19 +198,17 @@ to{opacity:1; transform:translateY(0);}
 
 </div>
 
-<!-- IMAGE GALLERY -->
-
 <div id="gallery" class="gallery"></div>
 
 <footer>
 
 <h3>📍 Address</h3>
 <p>Saundaryaprabha Beauty Parlour</p>
-<p>Bajar Peth at post thalner , shirpur 425421</p>
-<p>Dhule, Maharashtra</p>
+<p>Bajar Peth at post thalner, shirpur 425421</p>
+<p> Dhule, Maharashtra</p>
 
 <h3>📞 Contact</h3>
-<p>Phone: +91 8007962001 </p>
+<p>Phone: +91 8007962001</p>
 
 </footer>
 
