@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Saundaryaprabha Beauty Parlour</title>
+
+<meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur provides hair spa, keratin, smoothening, haircut, facial, laser treatment and bridal makeup services.">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background:#f5f0ff;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#c8a2ff,#a678ff);
+padding:90px 20px;
+color:white;
+}
+
+header h1{
+font-size:48px;
+margin:0;
+letter-spacing:2px;
+}
+
+/* BUTTON */
+
+.main-btn{
+background:#7a4cff;
+color:white;
+padding:15px 45px;
+font-size:20px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:30px;
+transition:0.3s;
+}
+
+.main-btn:hover{
+transform:scale(1.1);
+background:#5f34e0;
+}
+
+/* SECTION */
+
+.section{
+padding:50px 20px;
+animation:fadeIn 0.8s ease;
+}
+
+/* CATEGORY CARDS */
+
+.card{
+background:white;
+padding:25px;
+margin:20px;
+display:inline-block;
+width:220px;
+border-radius:15px;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+cursor:pointer;
+font-size:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#efe7ff;
+}
+
+/* SERVICE BUTTONS */
+
+.service{
+background:white;
+padding:12px 18px;
+margin:10px;
+display:inline-block;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+cursor:pointer;
+transition:0.3s;
+}
+
+.service:hover{
+background:#e4d7ff;
+transform:scale(1.05);
+}
+
+/* IMAGE GALLERY */
+
+.gallery{
+margin-top:20px;
+}
+
+.gallery img{
+width:260px;
+height:195px;
+object-fit:cover;
+margin:12px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.25);
+transition:transform 0.4s;
+}
+
+/* HOVER ZOOM */
+
+.gallery img:hover{
+transform:scale(1.15);
+}
+
+/* FOOTER */
+
+footer{
+background:#c8a2ff;
+color:white;
+padding:30px;
+margin-top:50px;
+}
+
+/* SMOOTH ANIMATION */
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌸 Saundaryaprabha Parlour 🌸</h1>
+<p>Enhancing Your Natural Beauty</p>
+
+<button class="main-btn" onclick="showMenu()">Let's Explore</button>
+
+</header>
+
+<!-- MAIN MENU -->
+
+<div id="menu" class="section" style="display:none;">
+
+<div class="card" onclick="showHair()">Hair</div>
+<div class="card" onclick="showSkin()">Skin</div>
+<div class="card" onclick="showMakeup()">Makeup</div>
+
+</div>
+
+<!-- HAIR -->
+
+<div id="hair" class="section" style="display:none;">
+
+<h2>Hair Services</h2>
+
+<div class="service" onclick="showGallery('hairspa')">Hair Spa</div>
+<div class="service" onclick="showGallery('keratin')">Keratin</div>
+<div class="service" onclick="showGallery('smoothening')">Smoothening</div>
+<div class="service" onclick="showGallery('haircut')">Haircut</div>
+
+</div>
+
+<!-- SKIN -->
+
+<div id="skin" class="section" style="display:none;">
+
+<h2>Skin Services</h2>
+
+<div class="service" onclick="showGallery('laser')">Laser Treatment</div>
+<div class="service" onclick="showGallery('facial')">Facial</div>
+<div class="service" onclick="showGallery('eyebrow')">Eyebrow</div>
+
+</div>
+
+<!-- MAKEUP -->
+
+<div id="makeup" class="section" style="display:none;">
+
+<h2>Makeup Services</h2>
+
+<div class="service" onclick="showGallery('bridal')">Bridal Makeup</div>
+<div class="service" onclick="showGallery('regular')">Regular Makeup</div>
+
+</div>
+
+<!-- IMAGE GALLERY -->
+
+<div id="gallery" class="gallery"></div>
+
+<footer>
+
+<h3>📍 Address</h3>
+<p>Saundaryaprabha Beauty Parlour</p>
+<p>Bajar Peth at post thalner , shirpur 425421</p>
+<p>Dhule, Maharashtra</p>
+
+<h3>📞 Contact</h3>
+<p>Phone: +91 8007962001 </p>
+
+</footer>
+
+<script>
+
+function showMenu(){
+document.getElementById("menu").style.display="block";
+}
+
+function showHair(){
+document.getElementById("hair").style.display="block";
+document.getElementById("skin").style.display="none";
+document.getElementById("makeup").style.display="none";
+}
+
+function showSkin(){
+document.getElementById("skin").style.display="block";
+document.getElementById("hair").style.display="none";
+document.getElementById("makeup").style.display="none";
+}
+
+function showMakeup(){
+document.getElementById("makeup").style.display="block";
+document.getElementById("hair").style.display="none";
+document.getElementById("skin").style.display="none";
+}
+
+function showGallery(service){
+
+document.getElementById("gallery").innerHTML =
+`
+<img src="images/${service}1.jpg">
+<img src="images/${service}2.jpg">
+<img src="images/${service}3.jpg">
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>
