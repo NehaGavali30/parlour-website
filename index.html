@@ -5,11 +5,9 @@
 
 <title>Saundaryaprabha Beauty Parlour</title>
 
-<meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur provides hair spa, keratin, smoothening, haircut, facial, laser treatment and bridal makeup services.">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur provides hair spa, keratin, smoothening, haircut, facial, laser treatment and bridal makeup services.">
+<meta name="description" content="Saundaryaprabha Beauty Parlour in Bajar Peth, Shirpur offers hair spa, keratin, smoothening, haircut, facial and makeup services.">
 
 <style>
 
@@ -20,8 +18,6 @@ text-align:center;
 background:#f5f0ff;
 }
 
-/* HEADER */
-
 header{
 background:linear-gradient(135deg,#c8a2ff,#a678ff);
 padding:60px 20px;
@@ -29,120 +25,119 @@ color:white;
 }
 
 header h1{
-font-size:40px;
 margin:0;
+font-size:40px;
 }
-
-/* BUTTON */
 
 .main-btn{
 background:#7a4cff;
 color:white;
-padding:15px 40px;
+padding:18px 50px;
+font-size:22px;
+border:none;
+border-radius:35px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.menu-btn{
+background:white;
+padding:14px 30px;
+margin:10px;
 font-size:18px;
 border:none;
-border-radius:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
 cursor:pointer;
-margin-top:25px;
-transition:0.3s;
 }
-
-.main-btn:hover{
-transform:scale(1.1);
-background:#5f34e0;
-}
-
-/* SECTION */
-
-.section{
-padding:40px 15px;
-}
-
-/* CATEGORY CARDS */
-
-.card{
-background:white;
-padding:20px;
-margin:15px auto;
-width:90%;
-max-width:220px;
-border-radius:15px;
-box-shadow:0 6px 20px rgba(0,0,0,0.15);
-cursor:pointer;
-font-size:20px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-background:#efe7ff;
-}
-
-/* SERVICE BUTTONS */
 
 .service{
 background:white;
-padding:10px 15px;
-margin:8px;
+padding:14px 25px;
+margin:10px;
 display:inline-block;
-border-radius:8px;
+border-radius:10px;
 box-shadow:0 3px 10px rgba(0,0,0,0.2);
 cursor:pointer;
-transition:0.3s;
+font-size:18px;
 }
-
-.service:hover{
-background:#e4d7ff;
-transform:scale(1.05);
-}
-
-/* IMAGE GALLERY */
 
 .gallery{
 margin-top:20px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
 }
+
+/* FIXED IMAGE SIZE */
 
 .gallery img{
-width:100%;
-max-width:260px;
-height:auto;
-margin:10px;
+width:800px;
+height:600px;
+object-fit:cover;
+margin:15px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.25);
-transition:transform 0.4s;
 }
 
-/* HOVER ZOOM */
-
-.gallery img:hover{
-transform:scale(1.1);
+.price{
+font-size:22px;
+color:#7a4cff;
+font-weight:bold;
+margin-bottom:20px;
 }
 
-/* FOOTER */
+.book-btn{
+background:#7a4cff;
+color:white;
+padding:16px 40px;
+font-size:22px;
+border:none;
+border-radius:35px;
+cursor:pointer;
+margin:40px 0;
+}
+
+.form-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+}
+
+.form-box{
+background:white;
+padding:25px;
+border-radius:12px;
+width:320px;
+text-align:left;
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:10px;
+}
+
+.form-box button{
+width:100%;
+background:#7a4cff;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+}
 
 footer{
 background:#c8a2ff;
 color:white;
 padding:25px;
 margin-top:40px;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-header h1{
-font-size:30px;
-}
-
-.main-btn{
-font-size:16px;
-padding:12px 30px;
-}
-
 }
 
 </style>
@@ -160,52 +155,86 @@ padding:12px 30px;
 
 </header>
 
-<div id="menu" class="section" style="display:none;">
+<div id="menu" style="display:none; margin-top:40px;">
 
-<div class="card" onclick="showHair()">Hair</div>
-<div class="card" onclick="showSkin()">Skin</div>
-<div class="card" onclick="showMakeup()">Makeup</div>
+<button class="menu-btn" onclick="showHair()">Hair</button>
+<button class="menu-btn" onclick="showSkin()">Skin</button>
+<button class="menu-btn" onclick="showMakeup()">Makeup</button>
 
 </div>
 
-<div id="hair" class="section" style="display:none;">
+<div id="hair" style="display:none; margin-top:20px;">
 
 <h2>Hair Services</h2>
 
-<div class="service" onclick="showGallery('hairspa')">Hair Spa</div>
-<div class="service" onclick="showGallery('keratin')">Keratin</div>
-<div class="service" onclick="showGallery('smoothening')">Smoothening</div>
-<div class="service" onclick="showGallery('haircut')">Haircut</div>
+<div class="service" onclick="showGallery('hairspa',1000)">Hair Spa</div>
+<div class="service" onclick="showGallery('keratin',3000)">Keratin</div>
+<div class="service" onclick="showGallery('smoothening',2500)">Smoothening</div>
+<div class="service" onclick="showGallery('haircut',300)">Haircut</div>
 
 </div>
 
-<div id="skin" class="section" style="display:none;">
+<div id="skin" style="display:none; margin-top:20px;">
 
 <h2>Skin Services</h2>
 
-<div class="service" onclick="showGallery('laser')">Laser Treatment</div>
-<div class="service" onclick="showGallery('facial')">Facial</div>
-<div class="service" onclick="showGallery('eyebrow')">Eyebrow</div>
+<div class="service" onclick="showGallery('facial',1200)">Facial</div>
+<div class="service" onclick="showGallery('laser',4000)">Laser Treatment</div>
 
 </div>
 
-<div id="makeup" class="section" style="display:none;">
+<div id="makeup" style="display:none; margin-top:20px;">
 
 <h2>Makeup Services</h2>
 
-<div class="service" onclick="showGallery('bridal')">Bridal Makeup</div>
-<div class="service" onclick="showGallery('regular')">Regular Makeup</div>
+<div class="service" onclick="showGallery('bridal',8000)">Bridal Makeup</div>
+<div class="service" onclick="showGallery('regular',2000)">Regular Makeup</div>
 
 </div>
 
 <div id="gallery" class="gallery"></div>
 
+<div id="price" class="price"></div>
+
+<button class="book-btn" onclick="openForm()">Book Appointment</button>
+
+<div id="formPopup" class="form-popup">
+
+<div class="form-box">
+
+<h3>Book Appointment</h3>
+
+<label>Name</label>
+<input id="name" type="text">
+
+<label>Address</label>
+<input id="address" type="text">
+
+<label>Service</label>
+<select id="service">
+<option>Hair Spa</option>
+<option>Keratin</option>
+<option>Haircut</option>
+<option>Facial</option>
+<option>Laser</option>
+<option>Makeup</option>
+</select>
+
+<label>Phone</label>
+<input id="phone" type="text">
+
+<button onclick="sendWhatsApp()">Submit</button>
+
+</div>
+
+</div>
+
 <footer>
 
 <h3>📍 Address</h3>
 <p>Saundaryaprabha Beauty Parlour</p>
-<p>Bajar Peth at post thalner, shirpur 425421</p>
-<p> Dhule, Maharashtra</p>
+<p>Bajar Peth at post thalner, Shirpur</p>
+<p> Dhule , Maharashtra </p>
 
 <h3>📞 Contact</h3>
 <p>Phone: +91 8007962001</p>
@@ -222,21 +251,32 @@ function showHair(){
 document.getElementById("hair").style.display="block";
 document.getElementById("skin").style.display="none";
 document.getElementById("makeup").style.display="none";
+
+/* remove old images */
+
+document.getElementById("gallery").innerHTML="";
+document.getElementById("price").innerHTML="";
 }
 
 function showSkin(){
 document.getElementById("skin").style.display="block";
 document.getElementById("hair").style.display="none";
 document.getElementById("makeup").style.display="none";
+
+document.getElementById("gallery").innerHTML="";
+document.getElementById("price").innerHTML="";
 }
 
 function showMakeup(){
 document.getElementById("makeup").style.display="block";
 document.getElementById("hair").style.display="none";
 document.getElementById("skin").style.display="none";
+
+document.getElementById("gallery").innerHTML="";
+document.getElementById("price").innerHTML="";
 }
 
-function showGallery(service){
+function showGallery(service,price){
 
 document.getElementById("gallery").innerHTML =
 `
@@ -245,10 +285,28 @@ document.getElementById("gallery").innerHTML =
 <img src="images/${service}3.jpg">
 `;
 
+document.getElementById("price").innerHTML="Price ₹"+price;
+
+}
+
+function openForm(){
+document.getElementById("formPopup").style.display="flex";
+}
+
+function sendWhatsApp(){
+
+var name=document.getElementById("name").value;
+var address=document.getElementById("address").value;
+var phone=document.getElementById("phone").value;
+var service=document.getElementById("service").value;
+
+var message="New Parlour Appointment:%0AName: "+name+"%0AAddress: "+address+"%0AService: "+service+"%0APhone: "+phone;
+
+window.open("https://wa.me/918007962001?text="+message);
+
 }
 
 </script>
 
 </body>
-
 </html>
