@@ -66,7 +66,7 @@ font-size:18px;
 margin-top:20px;
 }
 
-/* FIXED IMAGE SIZE */
+/* DESKTOP IMAGE SIZE */
 
 .gallery img{
 width:800px;
@@ -75,6 +75,17 @@ object-fit:cover;
 margin:15px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.25);
+}
+
+/* MOBILE FIX */
+
+@media screen and (max-width:600px){
+
+.gallery img{
+width:95%;
+height:auto;
+}
+
 }
 
 .price{
@@ -233,8 +244,7 @@ margin-top:40px;
 
 <h3>📍 Address</h3>
 <p>Saundaryaprabha Beauty Parlour</p>
-<p>Bajar Peth at post thalner, Shirpur</p>
-<p> Dhule , Maharashtra </p>
+<p>Bajar Peth, Shirpur</p>
 
 <h3>📞 Contact</h3>
 <p>Phone: +91 8007962001</p>
@@ -251,8 +261,6 @@ function showHair(){
 document.getElementById("hair").style.display="block";
 document.getElementById("skin").style.display="none";
 document.getElementById("makeup").style.display="none";
-
-/* remove old images */
 
 document.getElementById("gallery").innerHTML="";
 document.getElementById("price").innerHTML="";
